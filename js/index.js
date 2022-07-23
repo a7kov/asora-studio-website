@@ -6,11 +6,13 @@ const staff = [
     {
         "id": "759407706708115491",
         "post": "Fondatrice",
+        "banner": "https://cdn.discordapp.com/attachments/967874299992105000/1000402525058519111/thumb-1920-314574.png",
 
     }, 
        {
         "id": "967870424178368522",
         "post": "Fondateur",
+        "banner": "https://cdn.discordapp.com/attachments/967874299992105000/1000399742741774386/zero-two.gif",
      }
 ]
 
@@ -24,8 +26,8 @@ for (let indexOne = 0; indexOne < staff.length; indexOne++) {
                     document.querySelectorAll(".banner img").forEach(imgs => imgs.src = url + "../img/banner.png");
                 }, 1000);
             }
-
-            const equipeList = "<div id='trigger' class='card3' style='margin: 15px; font-family: 'Patrick Hand', cursive;'><div class='banner'><img src='" + output.url + "'></div></br></br></br></br><br><br><h2 class='name'>" + output.username + "</h2><center><div class='title'><h1 id='trigger2' style='font-size: 26px; color: #000000; font-family: 'Patrick Hand', cursive;'>" + elementstaff.post + "</h2></div></center></div>"
+            const equipeList = "<div id='stflist'> <figure class='stfs hover'> <img src='"+ elementstaff.banner +"'> <figcaption> <img src='" + output.url +"' alt='Logo Pi' class='profile' /> <h2>" + output.username +"<span>" + elementstaff.post +"</span></h2> </figcaption> </figure>"
+           
             boxstaff.innerHTML += equipeList;
         });
 }
